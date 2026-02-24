@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full fixed z-50 transition-all duration-300 px-4 py-4 backdrop-blur-xl">
+    <nav className="w-full fixed z-50 transition-all duration-300 px-4 py-4 backdrop-blur-xl overflow-x-hidden">
       {/* Container */}
       <div className="container mx-auto flex flex-wrap justify-between items-center">
         {/* Logo */}
