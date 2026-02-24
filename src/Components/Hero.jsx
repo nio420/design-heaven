@@ -45,7 +45,7 @@ const Hero = () => {
             {hero.stats.map((item, index) => (
               <div key={index}>
                 <h3 className="text-gray-800 font-bold font-heading text-3xl">
-                  <CountUp value={item.value} duration={3000}/>
+                  <CountUp value={item.value} duration={3000} />
                 </h3>
                 <p className="text-gray-700 text-sm font-light mt-1">
                   {item.label}
@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
 
             {/* Floating card - responsive */}
-            <div className="absolute -bottom-4 left-4 sm:-bottom-6 sm:-left-6 bg-white p-4 shadow-xl rounded-2xl w-[85%] sm:w-64">
+            <div className="absolute -bottom-4 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto bg-white p-4 shadow-xl rounded-2xl w-auto sm:w-64">
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
                   <FaTrophy className="text-white text-lg" />
