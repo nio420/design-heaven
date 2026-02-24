@@ -1,6 +1,7 @@
 import React from "react";
 import { FaAward, FaCalendarAlt, FaPlayCircle, FaTrophy } from "react-icons/fa";
 import { homePageData } from "../assets/homePageData.js";
+import CountUp from "./CountUp";
 
 const Hero = () => {
   const { hero } = homePageData;
@@ -44,7 +45,7 @@ const Hero = () => {
             {hero.stats.map((item, index) => (
               <div key={index}>
                 <h3 className="text-gray-800 font-bold font-heading text-3xl">
-                  {item.value}
+                  <CountUp value={item.value} duration={3000}/>
                 </h3>
                 <p className="text-gray-700 text-sm font-light mt-1">
                   {item.label}
