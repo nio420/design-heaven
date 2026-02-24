@@ -80,14 +80,14 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`
-    md:hidden overflow-hidden
+    md:hidden w-full max-w-full px-4 overflow-hidden
     transition-all duration-500 ease-in-out
     ${isOpen ? "max-h-96 opacity-100 mt-6 pb-4" : "max-h-0 opacity-0 mt-0 pb-0"}
   `}
       >
         <div
           className={`
-      flex flex-col gap-4 justify-center items-center
+      w-full max-w-full flex flex-col gap-4 justify-center items-center
       transition-all duration-500 ease-in-out
       ${isOpen ? "translate-y-0" : "-translate-y-2"}
     `}
@@ -102,7 +102,11 @@ const Navbar = () => {
           w-full text-center px-4 py-2 rounded-lg font-medium
           transition-all duration-300
           ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}
-          ${isActive ? "text-accent font-semibold bg-accent/10" : "text-gray-700 hover:text-accent hover:bg-gray-50"}
+          ${
+            isActive
+              ? "text-accent font-semibold bg-accent/10"
+              : "text-gray-700 hover:text-accent hover:bg-gray-50"
+          }
         `
               }
               style={{
@@ -130,10 +134,7 @@ const Navbar = () => {
       isActive
         ? "bg-accent text-white shadow-md"
         : "bg-linear-to-r from-accent to-accent-hover text-white hover:shadow-lg hover:-translate-y-0.5"
-    }
-
-    ring-1 ring-accent/30 hover:ring-accent/60
-  `
+    } ring-1 ring-accent/30 hover:ring-accent/60 `
             }
             style={{
               transitionDelay: isOpen ? `${navlist.length * 60}ms` : "0ms",
